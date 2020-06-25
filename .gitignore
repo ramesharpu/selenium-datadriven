@@ -23,5 +23,4 @@ target/
 .classpath
 
 #selenium
-drivers/
 test-output/
