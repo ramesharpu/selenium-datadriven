@@ -1,11 +1,5 @@
 package pom;
 
-
-
-import java.util.HashMap;
-import java.util.Map;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -86,8 +80,6 @@ public class Navigation {
 	}
 	
 	public void signOut() {
-		int a =10;
-		System.out.println("test");
 		driver.navigate().to(baseUrl);
 		action.moveToElement(accountsAndListElement)
 		.moveToElement(signOut).click()
