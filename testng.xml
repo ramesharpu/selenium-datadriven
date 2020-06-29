@@ -3,9 +3,10 @@
 <suite name="Regression Suite">
 <parameter name="invalidEmailId" value="GSS@#$@gmail.com"></parameter>
 <parameter name="invalidPhoneNumber" value="1234567891"></parameter>
-<parameter name="validUsername" value="test@gmail.com"></parameter>
-<parameter name="validPassword" value="test1234"></parameter>
-<parameter name="" value=""></parameter>
+<parameter name="validUsername" value="validuser@gmail.com"></parameter>
+<parameter name="validPassword" value="validPassword"></parameter>
+<parameter name="pincode" value="560078"></parameter>
+<parameter name="mobilePrice" value="16,999.00"></parameter>
   <test thread-count="5" name="Regression Test">
     <packages>
       <package name="test"/>

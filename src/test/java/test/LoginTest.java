@@ -36,7 +36,6 @@ public class LoginTest extends BaseTest {
 		assert(expectedPhoneErrorMessage.equals(result.get("errorMessage")));
 	}
 
-	//Coding Inprogress
 	@Parameters({"validUsername", "validPassword"})
 	@Test(description = "Test to validate login functionality with valid username/password",
 	enabled = false)
@@ -45,15 +44,9 @@ public class LoginTest extends BaseTest {
 		By welcomeMessage = By.xpath("//span[@class='nav-line-3']");
 		Login login = new Login(driver);
 		login.successfulLogin(username, password);
-//		WebDriverWait wait = new WebDriverWait(driver, 10);
 		String actualWelcomeString = driver.findElement(welcomeMessage).getText();
 		System.out.println(actualWelcomeString);
 		assertTrue(welcomeString.equals(welcomeString));
-		System.out.println("*********");
-
-
-		//signout code to do
-//		login.logout();
-
+		login.logout();
 	}
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Common {
@@ -56,7 +57,7 @@ public class Common {
 		this.driver.manage().window().maximize();
 
 		if(url!="")
-			this.driver.get(url);//opening the url
+			this.driver.get(url);
 		else {
 			System.out.println("url is not provided and hence quiting the test run");
 			quitBrowser();			

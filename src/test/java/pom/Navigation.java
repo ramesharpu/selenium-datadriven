@@ -1,5 +1,6 @@
 package pom;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,7 +15,6 @@ public class Navigation {
 	Actions action;
 	WebDriverWait wait;
 	String baseUrl = "https://www.amazon.in";
-	
 	
 	@CacheLookup
 	@FindBy(xpath = "//span[@class='nav-line-2 ']")
@@ -55,6 +55,7 @@ public class Navigation {
 	@CacheLookup
 	@FindBy(xpath = "//h1[contains(text(),'Login')]")
 	WebElement loginText;
+
 	
 	public Navigation(WebDriver driver) {
 		this.driver = driver;
@@ -81,10 +82,11 @@ public class Navigation {
 	
 	public void signOut() {
 		driver.navigate().to(baseUrl);
-		action.moveToElement(accountsAndListElement)
+		WebElement elem = driver.findElement(By.xpath("//span[@class='nav-line-2 ']"));
+		wait.until(ExpectedConditions.elementToBeClickable(elem));
+		action.moveToElement(elem)
 		.moveToElement(signOut).click()
 		.build().perform();
-//		wait.until(ExpectedConditions.visibilityOf(loginText));
 	}
 	
 	public void amazonPay() {

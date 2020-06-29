@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login {
+	@SuppressWarnings("unused")
 	private WebDriver driver;
 	Actions action;
 	WebDriverWait wait;
@@ -80,7 +81,6 @@ public class Login {
 		enterPassword(password);
 	}
 	
-	//coding inprogress
 	public void logout() {
 		nav.signOut();
 
